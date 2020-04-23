@@ -7,4 +7,4 @@ zstyle ':vcs_info:git:*' formats '%b'
 
 PROMPT='%F{green}[%~]%f %F{yellow}'\$vcs_info_msg_0_'%f'$'\n''%F{green}>%f '
 
-alias ll='ls -l'
+alias ll='ls -pla'
