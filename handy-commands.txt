@@ -1,1 +1,44 @@
 tr -sc 'A-Za-z' '\n' < txtfile | sort | uniq -c | less
+
+#grep equivalent
+sed -n '/<pattern>/p' <filename>
+
+#sed stuff
+sed -e 's/<pattern>/<replacing string>/' <filename>
+sed -e '1d' #remove first line
+sed -e '1d' -e 's/<pattern>/<replacing string>/' #substitute except 1st line
+sed -e 's/<pattern>/<replacing string>/g' #global replace
+
+#activity monitor equivalent
+htop
+top
+
+#processes
+ps | more
+ps | grep <pattern>
+kill <pid>
+
+#memory
+free #display free/used/swap memory
+
+#disk usage
+df #file system
+du #directory
+
+#system information
+uname -a
+
+#sorting
+sort <filename> #sort ascending
+sort -r <filename> #sort descending
+sort -t: -k 3n /etc/passwd #sort passwd by 3rd field
+
+#tail
+tail <filename>
+tail -n N <filename>
+
+#copy files between hosts in a network
+scp
+
+crontab -l
+*/10 * * * * /home/<user>/check-disk-space #schedule cronjob every 10 mins
